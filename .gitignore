@@ -1,0 +1,6 @@
+node_modules/
+_footer.html
+_compare.html
+_cmp-*.png
+.DS_Store
+Thumbs.db
