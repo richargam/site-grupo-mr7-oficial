@@ -19,67 +19,52 @@
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="site-header" id="topo">
-    <div class="container nav-wrap">
-      <a class="brand" href="#topo" aria-label="Grupo MR7 — início">
-        <img src="assets/logos/mr7-logo.png" alt="MR7 Agência Digital">
-      </a>
-      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
-        <a href="#grupo">O Grupo</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#ecossistema">Ecossistema</a>
-        <a href="#portfolio">Portfólio</a>
-        <a href="#contato">Contato</a>
-      </nav>
-      <a class="btn btn-small btn-primary header-cta" href="#contato">Comece seu projeto</a>
-    </div>
+  <header class="t7-header" id="topo">
+    <a class="t7-brand-link" href="#topo" aria-label="CRM7 — início"><img class="t7-brand" src="assets/crm7/crm7-logo.png" alt="CRM7 — Plataforma de Gestão Inteligente"></a>
+    <nav class="t7-nav" aria-label="Navegação principal">
+      <a href="#ecossistema">Agentes</a>
+      <a href="#servicos">Recursos</a>
+      <a href="#grupo">Sobre a MR7</a>
+    </nav>
+    <a class="t7-login" href="#contato">Entrar</a>
   </header>
 
   <main id="conteudo">
-    <section class="hero section-shell">
-      <div class="hero-glow"></div>
-      <div class="hero-seven" aria-hidden="true">7</div>
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">A cultura domina a cena.</p>
-          <h1>Estratégia, criatividade,<br><span>audiovisual e tecnologia</span><br>em um único ecossistema.</h1>
-          <p class="lead">O Grupo MR7 transforma ideias em marcas, conteúdos em conexões e experiências em resultados reais para o seu negócio.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contato">Preencher briefing <span>→</span></a>
-            <a class="btn btn-ghost" href="https://wa.me/5521967007447" target="_blank" rel="noopener">Falar no WhatsApp</a>
-          </div>
+    <section class="t7-hero" id="hero" aria-labelledby="t7-title">
+      <div class="t7-person">
+        <div class="t7-shield">
+          <svg class="t7-shield-art" viewBox="0 0 700 760" aria-hidden="true">
+            <defs>
+              <linearGradient id="shieldGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#6f2cff"/>
+                <stop offset="0.45" stop-color="#d26cff"/>
+                <stop offset="1" stop-color="#7b20ff"/>
+              </linearGradient>
+              <filter id="purpleGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="7" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <path d="M350 28C260 86 166 118 78 134v210c0 188 101 309 272 389 171-80 272-201 272-389V134C534 118 440 86 350 28Z" fill="rgba(67,18,128,.12)" stroke="url(#shieldGradient)" stroke-width="7" filter="url(#purpleGlow)"/>
+            <path d="M350 68C274 114 203 139 119 156v181c0 157 83 262 231 338 148-76 231-181 231-338V156c-84-17-155-42-231-88Z" fill="none" stroke="#8c3cff" stroke-opacity=".55" stroke-width="2"/>
+            <g fill="none" stroke="#9e4eff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".62">
+              <path d="M154 246h105l45 42v72"/><circle cx="154" cy="246" r="6" fill="#ca72ff"/>
+              <path d="M546 246H441l-45 42v72"/><circle cx="546" cy="246" r="6" fill="#ca72ff"/>
+              <path d="M160 330h70l50 46v92"/><circle cx="160" cy="330" r="5" fill="#ca72ff"/>
+              <path d="M540 330h-70l-50 46v92"/><circle cx="540" cy="330" r="5" fill="#ca72ff"/>
+              <path d="M208 195h90l52 48 52-48h90"/>
+              <path d="M237 525h58l55 51 55-51h58"/>
+            </g>
+            <path d="M350 248 461 312v128L350 504 239 440V312Z" fill="rgba(94,22,183,.12)" stroke="url(#shieldGradient)" stroke-width="7" filter="url(#purpleGlow)"/>
+            <path d="M350 301 414 338v74l-64 37-64-37v-74Z" fill="rgba(143,57,255,.08)" stroke="#c269ff" stroke-width="4"/>
+          </svg>
         </div>
-
-        <div class="hero-visual reveal" aria-label="RicharGam, fundador e CEO do Grupo MR7">
-          <div class="photo-light"></div>
-          <img class="hero-person" src="assets/photos/richargam-hero.png" alt="RicharGam apontando para o conteúdo do site">
-          <div class="signature">
-            <span class="signature-name">RicharGam</span>
-            <small>Fundador e CEO</small>
-          </div>
-        </div>
+        <img class="t7-photo" src="assets/crm7/richargam-crm7.png" alt="RicharGam apontando para a apresentação do CRM7">
       </div>
-
-      <div class="container stats-row reveal" aria-label="Indicadores do Grupo MR7">
-        <article class="stat-card">
-          <div class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 16 14 6l4 4L8 20H4v-4Z"/><path d="m13 7 4 4"/></svg></div>
-          <div><strong>+300</strong><span>Projetos entregues</span></div>
-        </article>
-        <article class="stat-card">
-          <div class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 19c.7-4 3-6 6-6s5.3 2 6 6M14 14c3 0 5 1.7 6 5"/></svg></div>
-          <div><strong>+120</strong><span>Clientes ativos</span></div>
-        </article>
-        <article class="stat-card">
-          <div class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V9m5 10V5m5 14v-7m5 7V3"/></svg></div>
-          <div><strong>+8M</strong><span>Pessoas alcançadas</span></div>
-        </article>
-        <article class="stat-card">
-          <div class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L12 3Z"/></svg></div>
-          <div><strong>+12</strong><span>Anos de mercado</span></div>
-        </article>
+      <div class="t7-content">
+        <img class="t7-logo" src="assets/crm7/crm7-logo.png" alt="CRM7 — Plataforma de Gestão Inteligente">
+        <h1 class="t7-title" id="t7-title">Agentes de <span class="accent">IA</span> <br>trabalhando pela sua <em>estratégia.</em></h1>
+        <p class="t7-copy">O CRM7 é a plataforma de gestão inteligente da MR7. <br>Nossos agentes de IA monitoram, analisam e otimizam <br>cada ação da sua campanha — <strong>em tempo real.</strong></p>
       </div>
     </section>
 
