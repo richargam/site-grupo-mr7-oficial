@@ -83,3 +83,50 @@
   .t7-shield{width:320px;height:352px}
 }
 html{overflow-x:hidden}
+
+/* ===================== NOVA SEÇÃO ECOSSISTEMA MODULAR (classes eco-) ===================== */
+.eco{padding:96px 0 92px;background:linear-gradient(180deg,#070509 0%,#0a0710 55%,#070509 100%)}
+.eco-inner{position:relative}
+.eco-inner::before{content:"";position:absolute;inset:-40px 0 0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(168,85,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(168,85,255,.05) 1px,transparent 1px);background-size:52px 52px;-webkit-mask:radial-gradient(ellipse 70% 60% at 50% 40%,#000,transparent 78%);mask:radial-gradient(ellipse 70% 60% at 50% 40%,#000,transparent 78%);opacity:.5}
+.eco-head{position:relative;z-index:1;text-align:center;max-width:760px;margin:0 auto 62px}
+.eco-eyebrow{margin:0 0 14px;color:#b06bff;text-transform:uppercase;letter-spacing:.26em;font-size:11px;font-weight:800}
+.eco-title{margin:0 0 16px;font-size:clamp(28px,3vw,42px);line-height:1.14;letter-spacing:-.03em;font-weight:800;color:#f4f1f8}
+.eco-title span{color:#c07bff}
+.eco-sub{margin:0 auto;max-width:620px;color:#b9b2c6;font-size:16px;line-height:1.65}
+.eco-map{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+/* módulo principal MR7 */
+.eco-core{position:relative;width:min(320px,86%);min-height:132px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(176,107,255,.45);border-radius:16px;background:linear-gradient(180deg,rgba(26,15,44,.72),rgba(10,6,20,.85));box-shadow:0 0 0 1px rgba(176,107,255,.06) inset,0 18px 50px rgba(70,15,140,.28),0 0 34px rgba(140,60,255,.14)}
+.eco-core-mark{font-size:44px;font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1}
+.eco-core-mark b{color:#c07bff;font-weight:800}
+.eco-core-tag{text-transform:uppercase;letter-spacing:.22em;font-size:9.5px;font-weight:700;color:#9a93aa}
+.eco-dot{position:absolute;width:5px;height:5px;border-radius:50%;background:#c07bff;box-shadow:0 0 8px #a855ff}
+.eco-dot-a{top:14px;left:16px;opacity:.7}
+.eco-dot-b{bottom:14px;right:16px;opacity:.5}
+/* conectores retos */
+.eco-links{width:100%;max-width:920px;height:96px;display:block;margin:2px 0 -6px}
+.eco-links line{stroke:rgba(176,107,255,.30);stroke-width:1;vector-effect:non-scaling-stroke;transition:stroke .3s ease}
+.eco-map:hover .eco-links line{stroke:rgba(190,120,255,.5)}
+/* módulos */
+.eco-grid{width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.eco-mod{position:relative;min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:26px 20px;text-align:center;border:1px solid rgba(168,85,255,.20);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.022),rgba(255,255,255,.006));transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease;outline:none}
+.eco-mod::after{content:"";position:absolute;top:12px;right:12px;width:4px;height:4px;border-radius:50%;background:rgba(176,107,255,.45)}
+.eco-mod:hover,.eco-mod:focus-visible{transform:translateY(-6px);border-color:rgba(190,120,255,.55);box-shadow:0 18px 40px rgba(52,8,110,.32),0 0 22px rgba(140,60,255,.12)}
+.eco-mark{font-size:23px;font-weight:800;letter-spacing:-.01em;color:#f2eefa;line-height:1}
+.eco-mark b{color:#c8b3ff;font-weight:800}
+.eco-desc{color:#a49db4;font-size:12.5px;line-height:1.45;max-width:180px}
+@media (max-width:1080px){
+  .eco-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .eco-links{display:none}
+  .eco-core{margin-bottom:26px}
+}
+@media (max-width:560px){
+  .eco{padding:64px 0 62px}
+  .eco-head{margin-bottom:40px}
+  .eco-map{position:relative}
+  .eco-grid{grid-template-columns:1fr;gap:14px}
+  .eco-core{width:min(300px,90%);margin-bottom:22px}
+  .eco-mod{min-height:auto;padding:22px 18px}
+  .eco-desc{max-width:none}
+  /* linha vertical sutil conectando MR7 aos módulos */
+  .eco-map::before{content:"";position:absolute;top:132px;left:50%;width:1px;height:26px;transform:translateX(-50%);background:linear-gradient(180deg,rgba(176,107,255,.5),transparent)}
+}
