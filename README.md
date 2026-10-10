@@ -1,23 +1,21 @@
-# Site Grupo MR7 — versão oficial
+# Site Grupo MR7
 
-Projeto estático reconstruído com base no layout-mestre fornecido por RicharGam.
+Site estático futurista MR7 com os arquivos recuperados da versão publicada para testes, preservando logos e fotos existentes.
 
-## Abrir no computador
+## Atualização
 
-Abra o arquivo `index.html` no navegador.
+Branch de trabalho: `feat/mr7-site-futurista-integracao`.
+Projeto Git conectado: `site-grupo-mr7-oficial`.
+Push nesta branch gera preview. Produção, domínio e branches principais exigem aprovação explícita.
+A configuração documentada em PUBLICAR.md precisa ser conferida no painel antes de liberar produção.
 
-## Publicação
+## Atendimento
 
-Envie todo o conteúdo desta pasta para o diretório público da hospedagem (`public_html` ou equivalente), mantendo a estrutura de pastas.
+Lua: conexão pública com IA, TTS e transcrição do CRM7 pendente de autorização. Não há voz do navegador nem chatbot genérico substituto.
+Briefings públicos verificados em 10/10/2026: podcast (`/b/mr7cast`) e branding (`/b/branding`). Outros links devem ser gerados pela equipe na Central existente.
+O fluxo atual `/api/b/submit` grava no CRM7; cópias por e-mail e WhatsApp automático não estão implementadas nessa rota.
 
-## Contato configurado
+## Validação pendente
 
-- WhatsApp: +55 21 96700-7447
-- E-mail: richargam@gmail.com
-- Instagram: @mr7agenciadigital
-- YouTube: @mr7cast
-- TVMR7: tvmr7.org.br
-
-## Arquivos de referência
-
-A pasta `referencias` contém o layout-mestre e o HTML antigo usado apenas como fonte de conteúdo.
+CNPJ e endereço preservados dos documentos existentes; aprovação cadastral obrigatória antes de publicar.
+Dashboard contém números fictícios identificados como demonstração ilustrativa em desktop e mobile.

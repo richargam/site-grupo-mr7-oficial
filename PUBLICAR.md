@@ -18,8 +18,8 @@
 Usar os comandos:
 
 ```bash
-git switch master
-git pull --ff-only origin master
+git switch feat/mr7-site-futurista-integracao
+git pull --ff-only origin feat/mr7-site-futurista-integracao
 ```
 
 Após concluir e aprovar uma alteração:
@@ -27,7 +27,7 @@ Após concluir e aprovar uma alteração:
 ```bash
 git add <arquivos-específicos>
 git commit -m "mensagem do commit"
-git push origin master
+git push origin feat/mr7-site-futurista-integracao
 ```
 
 Depois:
@@ -45,9 +45,9 @@ Somente após a aprovação do Preview:
 ```bash
 git switch production
 git pull --ff-only origin production
-git merge --ff-only master
+git merge --ff-only feat/mr7-site-futurista-integracao
 git push origin production
-git switch master
+git switch feat/mr7-site-futurista-integracao
 ```
 
 Observações importantes:
@@ -80,7 +80,7 @@ Nunca usar automaticamente:
 - `git reset --hard`
 - `rebase`
 - `merge` com conflitos
-- publicação direta da `master`
+- publicação direta da `feat/mr7-site-futurista-integracao`
 - alteração de DNS ou domínio
 - promoção para Produção sem aprovação.
 
@@ -100,7 +100,7 @@ Em caso de problema:
   https://github.com/richargam/site-grupo-mr7-oficial.git
 
 - **Branch de desenvolvimento**:
-  `master`
+  `feat/mr7-site-futurista-integracao`
 
 - **Branch de Produção**:
   `production`
