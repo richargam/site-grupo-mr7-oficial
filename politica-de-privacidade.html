@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — MR7 Agência Digital</title>
+<meta name="description" content="Política de Privacidade da MR7 Agência Digital LTDA, em conformidade com a LGPD (Lei 13.709/2018).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#07070d;
+    --bg-soft:#0d0d17;
+    --card:rgba(255,255,255,.04);
+    --border:rgba(255,255,255,.09);
+    --text:#e8e8f2;
+    --muted:#9a9ab0;
+    --accent:#7c5cff;
+    --accent-2:#2dd4ff;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(600px 400px at 85% -10%, rgba(124,92,255,.18), transparent 60%),
+      radial-gradient(500px 350px at -10% 20%, rgba(45,212,255,.10), transparent 60%);
+  }
+  .wrap{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:0 20px 80px}
+  header.page{padding:72px 0 40px;text-align:left}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);
+    border:1px solid var(--border);border-radius:999px;padding:6px 14px;
+    background:rgba(45,212,255,.06);margin-bottom:22px;
+  }
+  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 10px var(--accent-2)}
+  h1{
+    font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,5vw,3rem);line-height:1.15;font-weight:700;
+    background:linear-gradient(92deg,#fff 20%,var(--accent) 70%,var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    margin-bottom:14px;
+  }
+  .updated{color:var(--muted);font-size:.92rem}
+  nav.toc{
+    margin:34px 0 10px;padding:22px 24px;border:1px solid var(--border);border-radius:var(--radius);
+    background:var(--card);backdrop-filter:blur(8px);
+  }
+  nav.toc strong{font-family:'Space Grotesk',sans-serif;font-size:.95rem;letter-spacing:.04em;display:block;margin-bottom:10px;color:#fff}
+  nav.toc ol{list-style:none;counter-reset:toc;columns:2;column-gap:28px}
+  nav.toc li{counter-increment:toc;break-inside:avoid;margin:5px 0}
+  nav.toc a{color:var(--muted);text-decoration:none;font-size:.92rem;transition:color .2s}
+  nav.toc a:hover{color:var(--accent-2)}
+  nav.toc a::before{content:counter(toc,decimal-leading-zero) " · ";color:var(--accent);font-weight:600}
+  section{margin-top:44px;scroll-margin-top:24px}
+  h2{
+    font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:700;margin-bottom:14px;
+    display:flex;align-items:baseline;gap:12px;
+  }
+  h2 .num{
+    font-size:.8rem;color:var(--accent);border:1px solid rgba(124,92,255,.4);border-radius:8px;
+    padding:2px 8px;letter-spacing:.06em;flex:none;transform:translateY(-2px);
+  }
+  h3{font-family:'Space Grotesk',sans-serif;font-size:1.02rem;margin:20px 0 8px;color:#fff}
+  p{color:var(--text);margin-bottom:12px}
+  p.note,li{color:#c9c9dc}
+  ul,ol.inner{margin:10px 0 14px 22px}
+  li{margin:6px 0}
+  li::marker{color:var(--accent)}
+  .card{
+    border:1px solid var(--border);border-radius:var(--radius);background:var(--card);
+    padding:20px 22px;margin:16px 0;backdrop-filter:blur(8px);
+  }
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.92rem}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+  th{color:var(--accent-2);font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
+  a{color:var(--accent-2)}
+  footer.page{
+    margin-top:70px;padding-top:26px;border-top:1px solid var(--border);
+    color:var(--muted);font-size:.86rem;line-height:1.7;
+  }
+  @media (max-width:640px){
+    nav.toc ol{columns:1}
+    header.page{padding-top:52px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page">
+    <span class="eyebrow">MR7 Agência Digital</span>
+    <h1>Política de Privacidade</h1>
+    <p class="updated">Última atualização: 09 de outubro de 2026</p>
+  </header>
+
+  <nav class="toc">
+    <strong>Índice</strong>
+    <ol>
+      <li><a href="#quem-somos">Quem somos</a></li>
+      <li><a href="#dados-coletados">Dados que coletamos</a></li>
+      <li><a href="#finalidades">Finalidades e bases legais</a></li>
+      <li><a href="#cookies">Cookies e tecnologias</a></li>
+      <li><a href="#compartilhamento">Compartilhamento de dados</a></li>
+      <li><a href="#armazenamento">Armazenamento e segurança</a></li>
+      <li><a href="#direitos">Seus direitos (LGPD)</a></li>
+      <li><a href="#menores">Dados de menores</a></li>
+      <li><a href="#alteracoes">Alterações desta política</a></li>
+      <li><a href="#contato">Contato e encarregado</a></li>
+    </ol>
+  </nav>
+
+  <section id="quem-somos">
+    <h2><span class="num">01</span> Quem somos</h2>
+    <p>Esta Política de Privacidade descreve como a <strong>MR7 AGÊNCIA DIGITAL LTDA</strong>, inscrita no CNPJ sob o nº <strong>69.432.586/0001-60</strong>, com sede na Rua Londres, 354B — Heliópolis, Belford Roxo/RJ, CEP 26.120-210 ("MR7", "nós"), coleta, utiliza, armazena e protege os dados pessoais dos visitantes e usuários do site <strong>grupomr7.com.br</strong> ("Site"), em conformidade com a Lei Geral de Proteção de Dados Pessoais — LGPD (Lei nº 13.709/2018) e o Marco Civil da Internet (Lei nº 12.965/2014).</p>
+    <p>Para os fins da LGPD, a MR7 atua como <strong>controladora</strong> dos dados pessoais tratados por meio deste Site.</p>
+  </section>
+
+  <section id="dados-coletados">
+    <h2><span class="num">02</span> Dados que coletamos</h2>
+    <h3>2.1 Dados fornecidos por você</h3>
+    <ul>
+      <li><strong>Formulários de contato e orçamento:</strong> nome, e-mail, telefone/WhatsApp, empresa e mensagem;</li>
+      <li><strong>Comunicação direta:</strong> informações enviadas por e-mail, WhatsApp ou redes sociais ao entrar em contato conosco.</li>
+    </ul>
+    <h3>2.2 Dados coletados automaticamente</h3>
+    <ul>
+      <li>Endereço IP, data e hora de acesso, tipo de navegador e dispositivo, sistema operacional;</li>
+      <li>Páginas visitadas, origem do acesso e interações no Site;</li>
+      <li>Identificadores de cookies e tecnologias semelhantes (ver seção 4).</li>
+    </ul>
+    <div class="card">
+      <p class="note"><strong>Princípio da minimização:</strong> coletamos apenas os dados necessários para as finalidades descritas nesta política. Você não é obrigado a fornecer dados pessoais para navegar no Site, mas alguns recursos (como solicitar orçamento) dependem deles.</p>
+    </div>
+  </section>
+
+  <section id="finalidades">
+    <h2><span class="num">03</span> Finalidades e bases legais</h2>
+    <table>
+      <thead><tr><th>Finalidade</th><th>Dados</th><th>Base legal (LGPD)</th></tr></thead>
+      <tbody>
+        <tr><td>Responder contatos e solicitações de orçamento</td><td>Nome, e-mail, telefone, mensagem</td><td>Procedimentos preliminares a contrato (art. 7º, V)</td></tr>
+        <tr><td>Prestação de serviços contratados</td><td>Dados cadastrais e contratuais</td><td>Execução de contrato (art. 7º, V)</td></tr>
+        <tr><td>Envio de comunicações e materiais de marketing</td><td>Nome, e-mail, telefone</td><td>Consentimento (art. 7º, I)</td></tr>
+        <tr><td>Métricas, estatísticas e melhoria do Site</td><td>Dados de navegação e cookies</td><td>Legítimo interesse (art. 7º, IX)</td></tr>
+        <tr><td>Cumprimento de obrigações legais e fiscais</td><td>Dados cadastrais e fiscais</td><td>Obrigação legal (art. 7º, II)</td></tr>
+        <tr><td>Defesa de direitos em processos</td><td>Dados pertinentes</td><td>Exercício regular de direitos (art. 7º, VI)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="cookies">
+    <h2><span class="num">04</span> Cookies e tecnologias de rastreamento</h2>
+    <p>Utilizamos cookies e tecnologias semelhantes para garantir o funcionamento do Site, medir audiência e, mediante consentimento, personalizar anúncios. As categorias utilizadas são:</p>
+    <ul>
+      <li><strong>Essenciais:</strong> necessários ao funcionamento do Site (não podem ser desativados);</li>
+      <li><strong>Analíticos:</strong> estatísticas de uso e desempenho (ex.: Google Analytics);</li>
+      <li><strong>Marketing:</strong> mensuração e personalização de campanhas (ex.: Meta Pixel, Google Ads).</li>
+    </ul>
+    <p>Você pode gerenciar cookies nas configurações do seu navegador. Para detalhes completos, consulte nossa <a href="politica-de-cookies.html">Política de Cookies</a>.</p>
+  </section>
+
+  <section id="compartilhamento">
+    <h2><span class="num">05</span> Compartilhamento de dados</h2>
+    <p>Não vendemos dados pessoais. Podemos compartilhar dados com:</p>
+    <ul>
+      <li><strong>Operadores e fornecedores de tecnologia:</strong> hospedagem, e-mail, ferramentas de análise e automação, que tratam dados em nosso nome e sob instruções contratuais;</li>
+      <li><strong>Plataformas de publicidade e análise:</strong> Google e Meta, conforme suas próprias políticas de privacidade, quando cookies de marketing forem aceitos;</li>
+      <li><strong>Autoridades públicas:</strong> quando exigido por lei, ordem judicial ou requisição de autoridade competente.</li>
+    </ul>
+    <p class="note">Alguns fornecedores podem estar localizados fora do Brasil. Nesses casos, a transferência internacional observa os requisitos do art. 33 da LGPD.</p>
+  </section>
+
+  <section id="armazenamento">
+    <h2><span class="num">06</span> Armazenamento, retenção e segurança</h2>
+    <p>Adotamos medidas técnicas e organizacionais adequadas para proteger os dados pessoais contra acessos não autorizados, perda, alteração ou destruição, incluindo criptografia em trânsito (HTTPS), controle de acesso e ambientes de hospedagem seguros.</p>
+    <p>Os dados são mantidos pelo tempo necessário ao cumprimento das finalidades desta política, de obrigações legais (ex.: prazos fiscais) ou para o exercício regular de direitos. Após esse período, são eliminados ou anonimizados.</p>
+  </section>
+
+  <section id="direitos">
+    <h2><span class="num">07</span> Seus direitos como titular (art. 18, LGPD)</h2>
+    <p>Você pode, a qualquer momento, solicitar:</p>
+    <ul>
+      <li>Confirmação da existência de tratamento e acesso aos seus dados;</li>
+      <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
+      <li>Anonimização, bloqueio ou eliminação de dados desnecessários ou excessivos;</li>
+      <li>Portabilidade dos dados a outro fornecedor;</li>
+      <li>Eliminação dos dados tratados com base no consentimento;</li>
+      <li>Informação sobre compartilhamentos realizados;</li>
+      <li>Revogação do consentimento e oposição a tratamentos.</li>
+    </ul>
+    <p>As solicitações podem ser feitas pelo canal indicado na seção 10 e serão respondidas nos prazos da legislação aplicável. Você também pode apresentar reclamação à <strong>ANPD</strong> (Autoridade Nacional de Proteção de Dados).</p>
+  </section>
+
+  <section id="menores">
+    <h2><span class="num">08</span> Dados de crianças e adolescentes</h2>
+    <p>O Site não é direcionado a menores de 18 anos e não coletamos intencionalmente dados de crianças e adolescentes. Caso identifiquemos tratamento indevido, os dados serão eliminados.</p>
+  </section>
+
+  <section id="alteracoes">
+    <h2><span class="num">09</span> Alterações desta política</h2>
+    <p>Esta política pode ser atualizada a qualquer momento para refletir mudanças legais, tecnológicas ou dos nossos serviços. A versão vigente estará sempre disponível nesta página, com a data da última atualização indicada no topo. Recomendamos a consulta periódica.</p>
+  </section>
+
+  <section id="contato">
+    <h2><span class="num">10</span> Contato e encarregado de dados (DPO)</h2>
+    <div class="card">
+      <p><strong>MR7 AGÊNCIA DIGITAL LTDA</strong><br>
+      CNPJ: 69.432.586/0001-60<br>
+      Rua Londres, 354B — Heliópolis, Belford Roxo/RJ — CEP 26.120-210<br>
+      E-mail para assuntos de privacidade: <a href="mailto:richargam@gmail.com">richargam@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer class="page">
+    <p>© 2026 MR7 Agência Digital LTDA — Todos os direitos reservados.<br>
+    Documentos relacionados: <a href="termos-de-uso.html">Termos de Uso</a> · <a href="politica-de-cookies.html">Política de Cookies</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
