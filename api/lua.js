@@ -39,7 +39,8 @@ async function handler(req, res) {
   let target;
   try { target = new URL(endpoint); } catch { return fail(503, 'A conexão com o CRM7 está em preparação.'); }
   if (process.env.LUA_PUBLIC_ENABLED !== 'true' || secret.length < 32 || target.protocol !== 'https:' || target.pathname !== '/api/lua-publica' || target.search || target.username || target.password) return fail(503, 'A conexão com o CRM7 está em preparação.');
-  const trustedHosts = ['crm.grupomr7.com.br'];
+  // O CRM responde nos dois endereços oficiais (21/11/2026).
+  const trustedHosts = ['crm.grupomr7.com.br', 'crm747.com.br'];
   if (process.env.LUA_CRM_PREVIEW_HOST) trustedHosts.push(process.env.LUA_CRM_PREVIEW_HOST);
   if (!trustedHosts.includes(target.hostname)) return fail(503, 'Configuração de atendimento indisponível.');
   let input;
@@ -65,8 +66,10 @@ async function handler(req, res) {
       return fail([429, 422, 413, 503].includes(upstream.status) ? upstream.status : 502, messages[upstream.status] || 'Não foi possível conectar ao atendimento. Tente novamente.');
     }
     if (input.action === 'tts') {
-      if (!(upstream.headers.get('content-type') || '').startsWith('audio/mpeg')) throw new Error('type');
-      res.setHeader('Content-Type', 'audio/mpeg'); return res.end(Buffer.from(await upstream.arrayBuffer()));
+      // Voz da Evelyn7 do servidor da MR7 chega em WAV (Kokoro); MP3 continua aceito.
+      const tipo = (upstream.headers.get('content-type') || '').split(';')[0].trim();
+      if (!['audio/wav', 'audio/mpeg'].includes(tipo)) throw new Error('type');
+      res.setHeader('Content-Type', tipo); return res.end(Buffer.from(await upstream.arrayBuffer()));
     }
     const result = await upstream.json();
     const clean = input.action === 'status' ? { bridge: result.bridge === true } : input.action === 'chat' ? { reply: result.reply } : { text: result.text };

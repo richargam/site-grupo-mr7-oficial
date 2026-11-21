@@ -37,7 +37,8 @@
     stopVoice(); const ownVersion = version; voiceRequest = new AbortController(); controls();
     status.textContent = 'Preparando a voz da Lua…';
     try {
-      const blob = await api({ action: 'tts', text }, voiceRequest.signal);
+      // O CRM aceita até 600 caracteres por fala (~40 s): respostas longas são lidas no começo.
+      const blob = await api({ action: 'tts', text: text.slice(0, 600) }, voiceRequest.signal);
       if (ownVersion !== version) return;
       audioUrl = URL.createObjectURL(blob); audio = new Audio(audioUrl);
       audio.addEventListener('ended', () => { stopVoice(); status.textContent = ''; });
